@@ -34,11 +34,12 @@
   </div>
   <!------- Navigation Bar Ends Here -------->
 
-<!-- header strts here -->
-<div id="text">
-  
-</div><hr>
-<!-- header ends here -->
+  <!-- header strts here -->
+  <div id="text">
+
+  </div>
+  <hr>
+  <!-- header ends here -->
 
   <!-- Typing Options starts here -->
   <div class="Content">
@@ -56,7 +57,7 @@
   </div>
   <hr>
   <section class="faQ_container">
-     <div class="faQ_title">
+    <div class="faQ_title">
       <h4>faQ</h4>
     </div>
     <div class="faQ">
@@ -115,17 +116,12 @@
       </div>
     </div>
   </section>
-
-
-
+  <!-- faQ section ends here -->
   <!-- footer -->
   <footer>
     <i class="fas fa-copyright"></i>Copywrite 2022 | paratyping.tk
   </footer>
-  <!-- footer -->
-
-
-
+  <!-- footer --
   <!-- Script -->
   <script>
     let toggles = document.getElementsByClassName('toggle');
@@ -157,19 +153,21 @@
         }
       });
     }
-    // javascript for rtping text animation
-    var i=0,text;
+    // javascript for writing text animation
+    var i = 0,
+      text;
     text = "Welcome to typing test!"
-    function typing(){
-      if(i<text.length){
+
+    function typing() {
+      if (i < text.length) {
         document.getElementById("text").innerHTML += text.charAt(i);
         i++;
-        setTimeout(typing,100);
+        setTimeout(typing, 100);
       }
     }
     typing();
-    // javascript for rtping text animation
-    
+    // javascript for writing text animation
+
     // Mobile Menu Toggle Button JavaScript
     var display = document.getElementById("sidemenu");
     var hidden = document.getElementById("closemenu");
@@ -185,5 +183,4 @@
   </script>
   <script src="/script.js"></script>
 </body>
-
 </html>
