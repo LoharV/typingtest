@@ -354,9 +354,9 @@ Test  starts here
   height: 40rem;
 }
 
-.faQ_container h4 {
+.faQ_container faQ_title h4 {
   text-align: center;
-  padding: 25px 0;
+  margin: 25px 0;
   font-size: 1.5rem;
 }
 
@@ -557,6 +557,15 @@ footer ends here
     justify-content: center;
     flex-direction: column;
   }
+   .faQ_container .faQ_title{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    }
 
   .faQ {
     height: auto;
