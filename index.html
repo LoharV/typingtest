@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Test | Vivek Lohar</title>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Custom Links -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Baloo+Da+2&family=Baloo+Thambi+2&family=Maven+Pro&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!------- Google Icons Link -------->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+  <!------- Navigation Bar Start Here -------->
+  <div class="navbar">
+    <div class="logo">
+      <i class="material-icons">tungsten</i>
+      <h1>typing<span>test</span></h1>
+    </div>
+    <ul id="list">
+      <i class="material-icons" sidemenu id="closemenu">close</i>
+      <li><a href="/test.html"><i class="material-icons">keyboard</i>Typing</a></li>
+    </ul>
+    <i class="material-icons" id="sidemenu">menu</i>
+  </div>
+  <!------- Navigation Bar Ends Here -------->
+
+<!-- header strts here -->
+<div id="text">
+  
+</div><hr>
+<!-- header ends here -->
+
+  <!-- Typing Options starts here -->
+  <div class="Content">
+    <div class="Main_box">
+      <div class="info">
+        <h2>Test Your Typing speed</h2>
+        <h3>Let's Take a Look...</h3>
+        <p>Speed of typing is very important for daily work. Typing speed is very much required to perform a given task on time so it is very important for your typing speed to be good.<br><br>
+          first, you will need to know the buttons of the keyboard, you will be sure which button is where and you will become familiar with the keyboard.<br><br>
+          Secondly, practice is very important. The more practice, the better the result.<br><br>
+          For this you can use our tool so that you know the speed of your typing and if you make any mistake.</p><br>
+        <a href="test.html" class="go_btn">Test your Speed</a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <section class="faQ_container">
+    <h4>FAQ</h4>
+    <div class="faQ">
+      <div class="holder">
+        <div class="que_holder">
+          <button class="toggle">
+            How can measure typing speed ?
+            <i class="fas fa-plus icon"></i>
+          </button>
+          <div class="content">
+            <p>If you want to increase your typing speed, there is only one way that is Practice, the more you practice, the better and faster you will be able to type.</p>
+          </div>
+        </div>
+        <div class="que_holder">
+          <button class="toggle">
+            How typing speed is measured ?
+            <i class="fas fa-plus icon"></i>
+          </button>
+          <div class="content">
+            <p>Typing speed is measured according to how many words you type in a minute. It is measured in WPM.</p>
+          </div>
+        </div>
+        <div class="que_holder">
+          <button class="toggle">
+            what is WPM?
+            <i class="fas fa-plus icon"></i>
+          </button>
+          <div class="content">
+            <p>WPM is known as Word Per Minute. It means How many words you type in a minute.</p>
+          </div>
+        </div>
+        <div class="que_holder">
+          <button class="toggle">
+            How Can I Give This test ?
+            <i class="fas fa-plus icon"></i>
+          </button>
+          <div class="content">
+            <p>Just Click On Go! Then Click on Start test button then click on the empty space then follow above paragraph and type the same paragraph. Your accuracy, speed and Mistakes will be shown to you at the top of the test box.</p>
+          </div>
+        </div>
+        <div class="que_holder">
+          <button class="toggle">
+            How fast I should type ?
+            <i class="fas fa-plus icon"></i>
+          </button>
+          <div class="content">
+            <p><span class="bold">Commonly this is classified according to your education:</span><br>
+              <br>
+              Middle school (Grades 6-8): 12-25 WPM<br>
+              <hr>
+              High school (Grades 9-12): 20-35 WPM
+              <hr>College/Adult: 50 WPM<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- footer -->
+  <footer>
+    <i class="fas fa-copyright"></i>Copywrite 2022 | paratyping.tk
+  </footer>
+  <!-- footer -->
+
+
+
+  <!-- Script -->
+  <script>
+    let toggles = document.getElementsByClassName('toggle');
+    let contentDiv = document.getElementsByClassName('content');
+    let icons = document.getElementsByClassName('icon');
+
+    for (let i = 0; i < toggles.length; i++) {
+      toggles[i].addEventListener('click', () => {
+        if (parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight) {
+          contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
+          toggles[i].style.color = "#0084e9";
+          icons[i].classList.remove('fa-plus');
+          icons[i].classList.add('fa-minus');
+        }
+        else {
+          contentDiv[i].style.height = "0px";
+          toggles[i].style.color = "#111130";
+          icons[i].classList.remove('fa-minus');
+          icons[i].classList.add('fa-plus');
+        }
+
+        for (let j = 0; j < contentDiv.length; j++) {
+          if (j !== i) {
+            contentDiv[j].style.height = "0px";
+            toggles[j].style.color = "#111130";
+            icons[j].classList.remove('fa-minus');
+            icons[j].classList.add('fa-plus');
+          }
+        }
+      });
+    }
+    // javascript for rtping text animation
+    var i=0,text;
+    text = "Welcome to typing test!"
+    function typing(){
+      if(i<text.length){
+        document.getElementById("text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing,100);
+      }
+    }
+    typing();
+    // javascript for rtping text animation
+    
+    // Mobile Menu Toggle Button JavaScript
+    var display = document.getElementById("sidemenu");
+    var hidden = document.getElementById("closemenu");
+    var list = document.getElementById("list");
+
+    display.onclick = function() {
+      list.style.visibility = "visible";
+      list.style.right = "0%";
+    }
+    hidden.onclick = function() {
+      list.style.right = "-50%";
+    }
+  </script>
+  <script src="/script.js"></script>
+</body>
+
+</html>
